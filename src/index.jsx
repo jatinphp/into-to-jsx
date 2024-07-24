@@ -13,7 +13,5 @@ ReactDOM.render(<div>
     <p>Alternatively you can include a remote setup script in your repo and reference it in the developer setup manual of your project.</p>
     <p>created by {name}</p>
     <p>copyright {year}</p>
-    </div>, document.getElementById("root")
-    
-);
+    </div>, document.getElementById("root"));
 

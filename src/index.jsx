@@ -6,5 +6,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-ReactDOM.render(<div><h1>My Favorite foods</h1><ul><li>one</li><li>two</li><li>three</li></ul></div>, document.getElementById("root"));
+const name = "Jatin Dhorajiya";
+const year = new Date().getFullYear();
+ReactDOM.render(<div>
+    <p>This might mean that you need to specify the --mirror option upon cloning as well to get the remotes to your local repo.</p>
+    <p>Alternatively you can include a remote setup script in your repo and reference it in the developer setup manual of your project.</p>
+    <p>created by {name}</p>
+    <p>copyright {year}</p>
+    </div>, document.getElementById("root")
+    
+);
 

@@ -5,38 +5,18 @@
 // to launch your react project in your browser
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./App";
+import * as Calculator from "./Calculator";
 
-const name = "Jatin Dhorajiya";
-const year = new Date().getFullYear();
-const customStyle = {
-    color:"red",
-    fontSize: "35px"
-}
-const currentTime = new Date().getHours();
-const customTimeStyle = {
-    color:"blue"
-}
-let greeting;
-if(currentTime < 12){
-    greeting = "Good Morning";
-    customTimeStyle.color = "red";
-}else if(currentTime < 18){
-    greeting = "Good afternoon";
-    customTimeStyle.color = "green";
-}else{
-    greeting = "Good night";
-}
+
 
 ReactDOM.render(<div>
-    <h1 style={customTimeStyle}>{greeting}</h1>
-    <h2 style={customStyle}>Hello World</h2>
-    <h1 className="heading" contentEditable="true" spellCheck="false">This might mean that you need to specify the --mirror option upon cloning as well to get the remotes to your local repo.</h1>
-    <p>Alternatively you can include a remote setup script in your repo and reference it in the developer setup manual of your project.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg" alt="alt" className="blog-img" />
-    <img src="https://www.eatingwell.com/thmb/088YHsNmHkUQ7iNGP4375MiAXOY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/article_7866255_foods-you-should-eat-every-week-to-lose-weight_-04-d58e9c481bce4a29b47295baade4072d.jpg" alt="alt" className="blog-img" />
-    <img src="https://cdn.britannica.com/36/123536-050-95CB0C6E/Variety-fruits-vegetables.jpg" alt="alt" className="blog-img" />
-    
-    <p>created by {name}</p> 
-    <p>copyright {year}</p>
-    </div>, document.getElementById("root"));
+    <App />
+    <ul>
+        <li>{Calculator.default(1,2)}</li>
+        <li>{Calculator.subtract(9,2)}</li>
+        <li>{Calculator.multiply(5,8)}</li>
+        <li>{Calculator.divide(100,8)}</li>
+    </ul>
+</div>, document.getElementById("root"));
 
